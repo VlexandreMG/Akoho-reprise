@@ -1,10 +1,10 @@
-<%@page import="faturefournisseur.As_BonDeCommande"%>
-<%@page import="affichage.PageRecherche"%>
-<%@page import="bean.TypeObjet"%>
-<%@page import="affichage.Liste"%>
-<%@ page import="java.util.Map" %>
-<%@ page import="java.util.HashMap" %>
-<%@ page import="faturefournisseur.As_BonDeCommandeCpl" %>
+<%@page import="faturefournisseur.As_BonDeCommande"%><%-- Importe la classe As_BonDeCommande : modèle métier (entité) représentant un bon de commande fournisseur ; c'est la classe "mère" dont hérite As_BonDeCommandeCpl utilisée plus bas. --%>
+<%@page import="affichage.PageRecherche"%><%-- Importe la classe PageRecherche : outil du framework qui génère une page de liste/recherche (formulaire de filtres + tableau des résultats + pagination + récapitulatif). --%>
+<%@page import="bean.TypeObjet"%><%-- Importe la classe TypeObjet : bean générique servant à charger une table de références ; ici il alimente la liste déroulante des modes de paiement (table MODEPAIEMENT). --%>
+<%@page import="affichage.Liste"%><%-- Importe la classe Liste : permet de transformer un champ de formulaire en liste déroulante (menu select) alimentée par une source de données. --%>
+<%@ page import="java.util.Map" %><%-- Importe l'interface Java standard java.util.Map : collection clé/valeur ; sert ici à déclarer la variable lienTab (menu clic droit du tableau). --%>
+<%@ page import="java.util.HashMap" %><%-- Importe la classe Java standard java.util.HashMap : implémentation concrète de Map ; sert ici à instancier lienTab (new HashMap()). --%>
+<%@ page import="faturefournisseur.As_BonDeCommandeCpl" %><%-- Importe la classe As_BonDeCommandeCpl : version "complétée" du bon de commande (hérite de As_BonDeCommande) avec des champs supplémentaires (libellés, montants, état, livraison) ; c'est l'objet réellement utilisé pour construire la liste. --%>
 
 <% try{
     String[] etatVal = {"","1","11","0"};
